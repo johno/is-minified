@@ -13,7 +13,10 @@ npm install --save is-minified
 ```javascript
 var isMinified = require('is-minified');
 
-isMinified();  // => true
+isMinified('.foo{color: blue}');  // => true
+isMinified('function(){return true}');  // => true
+
+isMinified('.foo\n{\n\tcolor:blue\n}');  // => false
 ```
 
 ## License

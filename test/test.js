@@ -19,8 +19,8 @@ var nonMinifiedStrings = [
 ]
 
 var specialCommentStrings = [
-  '.foo {} /*!\n\n\n*/',
-  '/*!\n\n \t\t \n\n*/function() {}'
+  '/*!\n\n \t\t \n\n*/function() {}',
+  '.foo {} /*!\n\n\n*/'
 ]
 
 describe('is-minified', function() {
@@ -37,23 +37,9 @@ describe('is-minified', function() {
     })
   })
 
-  describe('ignoreSpecialComments: true', function() {
-    it('should return true for minified strings', function() {
-      minifiedStrings.forEach(function(cssOrJsString) {
-        assert.ok(isMinified(cssOrJsString))
-      })
-    })
-
-    it('should return false for non minified strings', function() {
-      nonMinifiedStrings.forEach(function(cssOrJsString) {
-        assert.ok(!isMinified(cssOrJsString))
-      })
-    })
-
-    it('should ignore special comments', function() {
-      specialCommentStrings.forEach(function(cssOrJsString) {
-        assert.ok(isMinified(cssOrJsString, { ignoreSpecialComments: true }))
-      })
+  it('should return true for special comment strings', function() {
+    specialCommentStrings.forEach(function(cssOrJsString) {
+      assert.ok(isMinified(cssOrJsString))
     })
   })
 })

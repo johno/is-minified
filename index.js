@@ -7,9 +7,11 @@ module.exports = function isMinified(cssOrJsString, options) {
 
   options = options || {}
 
-  var regex = options.ignoreSpecialComments ?
-    /(\s){2}|\n/ :
-    /(\/\*\!([\s\S]*?)\*\/)((\s){2}|\n)/
+  if (!options.includeSpecialComments) {
+    var formattedString = cssOrJsString.replace(/(\/\*\!([\s\S]*?)\*\/)/, '')
+  } else {
+    var formattedString = cssOrJsString
+  }
 
-  return !regex.test(cssOrJsString)
+  return !/(\s){2}|\n/.test(formattedString)
 }
