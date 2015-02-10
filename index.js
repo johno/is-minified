@@ -1,7 +1,9 @@
-'use strict';
+'use strict'
 
-module.exports = function isMinified(options) {
-  options = options || {};
+module.exports = function isMinified(cssOrJsString) {
+  if (typeof cssOrJsString !== 'string') {
+    throw new TypeError('is-minified expects a string')
+  }
 
-  return true;
+  return true
 }

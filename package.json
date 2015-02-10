@@ -15,7 +15,13 @@
     "url": "https://github.com/johnotander/is-minified.git"
   },
   "keywords": [
-
+    "minified",
+    "minification",
+    "uglify",
+    "minify",
+    "uglified",
+    "css",
+    "js"
   ],
   "license": "MIT",
   "bugs": {
