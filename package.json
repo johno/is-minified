@@ -1,0 +1,29 @@
+{
+  "name": "is-minified",
+  "description": "Check whether a CSS or JS string is minified.",
+  "author": "John Otander",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/is-minified.git"
+  },
+  "keywords": [
+
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/is-minified/issues"
+  },
+  "homepage": "https://github.com/johnotander/is-minified",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
